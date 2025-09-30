@@ -1,0 +1,55 @@
+@font-face {
+    font-family: heading;
+    src: url(./TALIWANGKE.ttf);
+}
+:root{
+    --headingtext: ;
+    --sizeh: 14rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+
+}
+h1,h2{
+    font-family: heading;
+    font-size: var(--sizeh);
+    text-align: center;
+    padding: 100px;
+    font-weight: 300;
+    padding-top: 10%;
+    margin-top: -5%
+}
+#bg{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-image: url(./dev.jpg);
+    
+}
+button{
+    size: 100px;
+    font-size: var(--sizeh);
+    font-family: heading;
+    border-radius: 50px;
+    margin-left: 35%;
+    padding: 10px 20px;
+    background-color: #000;
+    background-size: cover;
+    color: #fff;
+
+}
+button:hover {
+ transition: width 2s, height 2s, background-color 2s, transform 2s;
+  background-image: url(./dev.jpg);
+  background-size: contain;
+  transform: rotate(360deg);
+  
+}

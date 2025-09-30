@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #374650;
+    color: #F1F2EE;  
+   
+}
+@font-face {
+    font-family: ay;
+    src: url(./ursula-handschrift-beta-02.ttf);
+}
+@font-face {
+    font-family: Day;
+    src: url(./FileDeletionItalic-z86K1.ttf);
+}
+:root{
+    --primary-color: #DCF736;
+    --secondary-color: green;
+    --test-color: #F1F2EE;
+    
+}
+h1,h2,h3{
+    color: var(--primary-color);
+    background-color: rgba(241, 242, 238, 0.275);
+    font-size: 72px;
+    
+}
+h4,h5,h6,p{
+    color: var(--test-color);
+}
+
+
+
+h1{
+    
+    text-align: center;
+    
+    
+}
+#navbar{
+    float: left;
+
+
+}
+h2{
+    font-family: ay;
+    text-align: center;
+    padding-top: 20px;
+    font-style: italic;
+    font-weight: 500;
+}
+a{
+    color: var(--primary-color);
+}

@@ -1,0 +1,153 @@
+<!doctype html> <!-- Ye batata hai ki document HTML5 format ka hai -->
+<html lang="en"> <!-- HTML page ki language English set kar rahe hain -->
+<head>
+<meta charset="utf-8" /> <!-- Unicode encoding use ho raha hai so emojis + Hindi + English sab kaam kare -->
+<meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Responsive design ke liye, mobile width detect karta hai -->
+<title>Advanced Navbar with Explanation</title> <!-- Page ka title -->
+<style>
+  /* ========= CSS VARIABLES (Design Tokens) ========= */
+  :root{
+    --bg: #F4FFFD;         /* Background color - yaha "--" ek CSS variable banane ka syntax hai */
+    --nav: #011936;        /* Navbar ka background color */
+    --text: #011936;       /* Primary text color */
+    --muted:#556072;       /* Secondary text color (light) */
+    --brand:#DCF763;       /* Accent color (Mindaro - highlight ke liye) */
+    --link:#374650;        /* Link color (secondary dark blue shade) */
+    --ring:#DCF763;        /* Focus ring color (outline jab tab ya keyboard se select karein) */
+    --border:#cfd6e3;      /* Border color for navbar sections */
+  }
+
+  /* ========= BASE STYLES ========= */
+  *{box-sizing:border-box} /* Har element ki width/height me padding aur border include ho */
+  body{
+    margin:0; /* Body ka default margin remove kiya */
+    background:var(--bg); /* Background variable apply */
+    color:var(--text); /* Text ka color */
+    font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto; /* Default font set */
+  }
+  a{
+    color:var(--link); /* Links ka default color */
+    text-decoration:none; /* Underline hatayi */
+  }
+  a:hover{color:var(--text)} /* Hover hone par link ka color text jaisa ho jaye */
+
+  .container{
+    max-width:1100px; /* Content max 1100px wide hoga */
+    margin:0 auto; /* Center align horizontally */
+    padding:0 16px; /* Left-right padding */
+  }
+
+  /* ========= NAVBAR ========= */
+  .nav{
+    position:sticky; /* Navbar scroll hone par bhi top pe chipka rahe */
+    top:0; /* Stick hone ka position 0 (top se) */
+    z-index:50; /* Layer order high so content ke upar rahe */
+    background:var(--nav); /* Navbar ka background color */
+    border-bottom:1px solid var(--border); /* Bottom border line */
+  }
+  .nav-row{
+    display:flex; /* Flexbox layout enable */
+    align-items:center; /* Items vertically center */
+    justify-content:space-between; /* Brand left, menu right */
+    min-height:56px; /* Height of navbar */
+    gap:12px; /* Elements ke beech gap */
+  }
+
+  /* ========= BRAND (Logo + Name) ========= */
+  .brand{
+    display:flex; /* Logo + text horizontally */
+    align-items:center; /* Vertical align center */
+    gap:10px; /* Logo aur text ke beech space */
+    font-weight:700; /* Text bold */
+  }
+  .brand .dot{
+    width:12px; height:12px; /* Dot ka size */
+    border-radius:50%; /* Circle banane ke liye */
+    background:var(--brand); /* Accent color dot */
+  }
+  .brand a{color:var(--bg)} /* Brand name ka color (white/light on dark) */
+
+  /* ========= HAMBURGER BUTTON ========= */
+  .nav-toggle{
+    background:none; /* Transparent background */
+    border:1px solid var(--border); /* Simple border */
+    color:var(--bg); /* Text (icon) ka color */
+    padding:8px 10px; /* Spacing */
+    border-radius:8px; /* Rounded corners */
+  }
+  .nav-toggle:focus-visible{outline:3px solid var(--ring);} /* Keyboard focus ring */
+  .nav-toggle[aria-expanded="true"]{border-color:var(--brand);} /* Open hone par highlight border */
+
+  /* ========= MENU ========= */
+  .menu{
+    display:none; /* Mobile par default hidden */
+    flex-direction:column; /* Links vertical */
+    gap:4px; /* Links ke beech gap */
+  }
+  .menu a{
+    padding:10px 12px; /* Links spacing */
+    border-radius:8px; /* Rounded edges */
+    color:var(--bg); /* White links */
+  }
+  .menu a:hover{background:var(--brand); color:#011936} /* Hover effect */
+  .menu a[aria-current="page"]{background:var(--brand); color:#011936;} /* Active link highlight */
+
+  /* ========= DESKTOP (Media Query) ========= */
+  @media (min-width:880px){
+    .nav-toggle{display:none} /* Desktop par hamburger chhupao */
+    .menu{
+      display:flex; /* Desktop par menu visible */
+      flex-direction:row; /* Horizontal layout */
+      gap:12px; /* Horizontal spacing */
+    }
+  }
+</style>
+</head>
+<body>
+<!-- SKIP LINK (Accessibility) -->
+
+
+<!-- NAVBAR -->
+<nav class="nav" aria-label="Primary Navigation"> <!-- ARIA label for accessibility -->
+  <div class="container nav-row">
+    <!-- BRAND -->
+    <div class="brand">
+      <span class="dot"></span> <!-- Colored circle as logo -->
+      <a href="/" aria-label="Homepage">Shahajahan</a> <!-- Brand text -->
+    </div>
+
+    <!-- TOGGLE BUTTON (Mobile) -->
+    <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+      ☰ <!-- Hamburger icon -->
+      <span class="sr-only">Menu</span> <!-- Screen readers ke liye text -->
+    </button>
+
+    <!-- MENU LINKS -->
+    <div id="primary-menu" class="menu">
+      <a href="/" aria-current="page">Home</a> <!-- Active link -->
+      <a href="/projects">Projects</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main" class="container" style="padding:32px 0">
+  <h1>Welcome</h1>
+  <p>Resize the window to see responsive navbar in action!</p>
+</main>
+
+<!-- JAVASCRIPT -->
+<script>
+  const toggle = document.querySelector('.nav-toggle'); // Toggle button select
+  const menu = document.getElementById('primary-menu'); // Menu select
+
+  toggle.addEventListener('click', () => { // Click event
+    const expanded = toggle.getAttribute('aria-expanded') === 'true'; // Check open/close state
+    toggle.setAttribute('aria-expanded', !expanded); // Update ARIA attribute for accessibility
+    menu.style.display = expanded ? 'none' : 'flex'; // Show/Hide menu
+  });
+</script>
+</body>
+</html>
