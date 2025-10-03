@@ -1,0 +1,104 @@
+@font-face {
+    font-family: heading;
+    src: url(./Flagfies.otf);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    font-family: heading;
+    color: aliceblue;
+    font-size: 12rem;
+    text-align: center;
+   
+    
+}
+h2{
+    font-family: heading;
+    color: aliceblue;
+    font-size: 12rem;
+    text-align: center;
+   
+    
+}
+h3{
+    font-family: heading;
+    color: aliceblue;
+    font-size: 12rem;
+    text-align: center;
+   
+    
+}
+h1:hover{
+    color: #ED254E;
+}
+h2:hover{
+    color: #1CE16C;
+}
+h3:hover{
+    color: #015CE5;
+}
+
+#family{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#car1{
+    height: 625px;
+    width: 940px;
+    position: absolute;
+    left: 0%;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1580446623001-3abf670c5c55?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVkJTIwY2FyfGVufDB8fDB8fHww);
+}
+#car1:hover{
+    height: 100%;
+    width: 100%;
+    
+    background-size: cover;
+}
+#car2{
+    color: blue;
+    height: 625px;
+    width: 940px;
+    position: fixed;
+    top: 625px;
+    left:  940px;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1579508542697-bb18e7d9aeaa?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#car2:hover{
+    height: 100%;
+    width: 100%;
+    
+    top: 0px;
+    left:  0px;
+    
+}
+#car3{
+    
+    position: absolute;
+    height: 625px;
+    width: 940px;
+    top: 1250px;
+    left: 1880px;;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1580654712603-eb43273aff33?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#car3:hover{
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left:  0px;
+    
+}
