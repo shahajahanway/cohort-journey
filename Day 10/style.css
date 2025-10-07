@@ -1,93 +1,165 @@
-/* VARIABLES */
-:root{
-    --bg: #F4FFFD;
-    --nav: #011936;
-    --text: #011936;
-    --muted: #556072;
-    --brand: #DCF763;
-    --link: #374650;
-    --ring: #DCF763;
-    --border: #cfd6e3;
+@font-face {
+    font-family: hed;
+    src: url(./ursula-handschrift-beta-02\ copy.ttf);
 }
-*{
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto;
+html, body {
+    height: 100%;
+    width: 100%;
 }
-a{
-    color: var(--link);
-    text-decoration: none;
-}
-a:hover{
-    color: var(--text);
-}
-.container{
-    max-width: 1100;
-    margin: 0;
-    padding: 0 16px;
+
+#div1{
+    padding: 40px 40px;
+    background-color: rgb(31, 30, 77);
+    text-align: center;
+    
+    color: aliceblue;
 
 }
-.nav{
-    position: sticky;
-    padding: 10px;
-    top: 0;
-    z-index: 50;
-    background: var(--nav);
-    border-bottom: 1px solid var(--border);
+#div1 h1{
+    font-size: 50px;
+    text-transform: capitalize ;
+    line-height: 90px;
+    text-transform: uppercase; 
+    font-family: hed;
+    
+}
+#div1 h3{
+    font-size: 20px;
+    text-transform: capitalize ;
+    
+    
+}
+
+#div2{
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 40px;
+
+    
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    padding: 30px;
+    
+}
+p{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 17%;
+    padding-right: 17%;
+    color: rgb(124, 122, 122);
+}
+#div3{
+    background-color: rgb(224, 238, 249);
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 50px;
+
+    
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    padding: 30px;
+    
+}
+#div3 p:hover{
+    font-size: 30px;   
 
 }
-.nav-row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 56px;
-    gap: 12px;
+#div3 p{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 17%;
+    padding-right: 17%;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    
+    font-size: 24px;
+    padding: 20px;
+    
 }
-.barnd{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
+#div4{
+    background-color: rgb(224, 238, 249);
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 50px;
+    background-color: #fcedb9;
+
 }
-.brand .not{
-    width: 12px; height: 12px;
-    border-radius: 50%;
-    background: var(--brand);
-  }
-.brand a{color:var(--bg)} 
+#div4 p{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 17%;
+    padding-right: 17%;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    
+    font-size: 24px;
+    padding: 20px;
+    
+}
+#div4 p:hover{
+    font-size: 30px; 
+}  
+#div5{
+    background-color: rgb(224, 238, 249);
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 50px;
+    background-color: #a48eb5;
 
-  .nav-toggle{
-    background:none; /* Transparent background */
-    border:1px solid var(--border); 
-    color:var(--bg); 
-    padding:8px 10px; 
-    border-radius:8px; 
-  }
-.nav-toggle:focus-visible{outline:3px solid var(--ring);} 
-.nav-toggle[aria-expanded="true"]{border-color:var(--brand);} 
-.menu{
-    display:none; /* Mobile par default hidden */
-    flex-direction:column; 
-    gap:5px; 
-  }
-  .menu a{
-    padding:14px 16px; 
-    border-radius:8px; 
-    color:var(--bg); 
-  }
-  .menu a:hover{background:var(--brand); color:#011936} 
-  .menu a[aria-current="page"]{background:var(--brand); color:#011936;} 
+}
+#div5 p{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 17%;
+    padding-right: 17%;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    
+    font-size: 24px;
+    padding: 20px;
+    
+}
+#div5 p:hover{
+    font-size: 30px;   
 
-  /* ========= DESKTOP (Media Query) ========= */
-  @media (min-width:768px){
-    .nav-toggle{display:none} 
-    .menu{
-      display:flex; 
-      flex-direction:row;
-      gap:12px;
-    }
-  }
+}
+#div6{
+    background-color: rgb(224, 238, 249);
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 50px;
+    background-color: #c2e6d9;
+
+}
+#div6 p{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 17%;
+    padding-right: 17%;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    
+    font-size: 24px;
+    padding: 20px;
+    
+}
+#div6 p:hover{
+    font-size: 30px;   
+
+}
