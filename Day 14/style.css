@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, ;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 35px;
+}
+h4{
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 10;
+    font-size: 12px;
+}
+section{
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+section>p>a{
+    color: #0166CC;
+}
+section p{
+    background-color: #F5F5F7;
+    color: black;
+    font-size: 14px;
+    padding: 0.5%;
+}
+section h1{
+    padding-top: 5%;
+    color: #4D5C67;
+    font-size: 40px;
+}
+section h2{
+    color: #A2AAB2;
+    font-size: 24px;
+}
+img{
+    width: 1920px;
+    height: 460px;
+    margin-left: 20%;
+}
+section button{
+    background-color: #0076DF;
+    padding: 18px 25px ;
+    border-radius: 46%;
+    margin-top: 70px;
+    border: 1px solid rgb(255, 255, 255);
+    
+    font-size: 17px;
+    color: #FFFFFF;
+}
+section button:hover{
+    font-size: 18px;
+}
+#price{
+    font-size: 17px;
+    padding-top: 2%;
+}
