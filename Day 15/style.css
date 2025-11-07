@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+   
+   flex-wrap: wrap;
+   overflow: hidden;
+    
+
+}
+.box1{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(96, 206, 191);
+    border: 5px solid rgb(239, 53, 53);
+    flex-shrink: 0;
+
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    border: 5px solid rgb(239, 53, 53);
+    flex-shrink: 0;
+}
+.box3{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 5px solid rgb(239, 53, 53);
+    flex-shrink: 0;
+}
