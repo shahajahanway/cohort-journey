@@ -1,0 +1,213 @@
+/* ================================================
+   GLOBAL STYLES
+================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* ================================================
+   MAIN LAYOUT
+================================================ */
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  grid-template-areas:
+    "top-left    top-center1  top-center2  top-right"
+    "top-left    center       center       top-right"
+    "bottom-left center       center       right-center"
+    "bottom-left bottom-center bottom-right bottom-right";
+}
+
+/* ================================================
+   TEXT ELEMENT STYLES
+================================================ */
+h1, h3, h4, p, i {
+  padding: 5%;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* ================================================
+   TOP LEFT SECTION
+================================================ */
+#top-left {
+  background-color: #FFFD8F;
+  grid-area: top-left;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+#top-left i {
+  background-color: transparent;
+  color: black;
+  font-size: 15rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#top-left h3 {
+  color: red;
+  position: absolute;
+  margin-top: -42%;
+  padding-left: 165px;
+  font-size: 2rem;
+}
+
+/* ================================================
+   TOP ROW SECTIONS
+================================================ */
+#top-center1 {
+  background-color: #B0CE88;
+  grid-area: top-center1;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#top-center2 {
+  background-color: #043915;
+  grid-area: top-center2;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+#top-center2 p{
+  color: greenyellow;
+}
+#top-center2 h1{
+  font-size: 6rem;
+}
+#top-center2 h2{
+  background-color: transparent;
+}
+
+
+#top-right {
+  background-color: #8C00FF;
+  grid-area: top-right;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* ================================================
+   CENTER SECTION
+================================================ */
+#center {
+  background-image: url("https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670");
+  background-size: cover;
+  color: black;
+  grid-area: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* ================================================
+   BOTTOM LEFT SECTION
+================================================ */
+#bottom-left {
+  background-color: #8C00FF;
+  grid-area: bottom-left;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-between;
+}
+#bottom-left .img1{
+  /* object-fit: cover; */
+  background-size: cover;
+  border-radius: 45%;
+  height: 200px;
+  height: 100px;
+}
+#bottom-left .img2{
+  object-fit: cover;
+  border-radius: 45%;
+  height: 200px;
+  width: 100px;
+
+}
+#bottom-left h2{
+  background-color: transparent;
+  font-size: 3rem;
+}
+
+
+/* ================================================
+   BOTTOM CENTER SECTION
+================================================ */
+#bottom-center {
+  background-color: #043915;
+  grid-area: bottom-center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#bottom-center h2,
+#bottom-center h3 {
+  background-color: transparent;
+  color: black;
+}
+
+/* ================================================
+   RIGHT CENTER SECTION
+================================================ */
+#right-center {
+  background-color: #B0CE88;
+  grid-area: right-center;
+  border-radius: 10px;
+  padding: 20px;
+  display: table-column;
+  justify-items: center;
+}
+
+#right-center h2 {
+  font-size: 4rem;
+  background-color: transparent;
+}
+
+#right-center i {
+  font-size: 5rem;
+  background-color: transparent;
+}
+
+/* ================================================
+   BOTTOM RIGHT SECTION
+================================================ */
+#bottom-right {
+  background-color: #FFFD8F;
+  grid-area: bottom-right;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+#bottom-right h2 {
+  font-size: 2rem;
+  background-color: transparent;
+  color: black;
+}
+
+#bottom-right p {
+  font-size: 1rem;
+  background-color: transparent;
+  color: black;
+}
