@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  padding: 20px;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 100px 1fr 1fr;
+
+  grid-template-areas: 
+  "header header header"
+  "section box box"
+  "section section2 section2"
+  ;
+}
+
+/* Custom Styles */
+header{
+    background-color: red;
+    grid-area: header;
+    border-radius: 20px;
+    padding: 20px;
+}
+section{
+    background-color: blue;
+    grid-area: section;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+#section2{
+    background-color: violet;
+    grid-area: section2;
+    border-radius: 20px;
+    padding: 20px;
+}
+#box{
+    background-color: green;
+    grid-area: box;
+    border-radius: 20px;
+    padding: 20px;
+}
