@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+main section {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  flex-grow: 2;
+  transition: all 0.7 cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+}
+main section:hover {
+  flex-grow: 4;
+}
+main section:nth-child(1) {
+  background-image: url(./imges/doom.jpg);
+}
+main section:nth-child(2) {
+  background-image: url(./imges/goku.jpg);
+}
+main section:nth-child(3) {
+  background-image: url(./imges/sarthack.png);
+}
+main section:nth-child(4) {
+  background-image: url(./imges/soon.jpg);
+}
+main section:nth-child(5) {
+  background-image: url(./imges/Ankur.png);
+}
+main section:nth-child(6) {
+  background-image: url(./imges/Umemiya.jpg);
+}
+main section:nth-child(7) {
+  background-image: url(./imges/ironman.jpg);
+}/*# sourceMappingURL=style.css.map */
